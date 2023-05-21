@@ -1,12 +1,12 @@
 package com.springboot.web;
 
 import com.springboot.service.posts.PostsService;
+import com.springboot.web.dto.PostsResponseDto;
 import com.springboot.web.dto.PostsSaveRequestDto;
+import com.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RestController
@@ -14,7 +14,7 @@ public class PostsApiController {
     @Autowired
     private final PostsService postsService;
 
-    private final NewService newService;
+    //private final NewService newService;
 
     @PostMapping("/api/v1/posts")
     public long save(@RequestBody PostsSaveRequestDto requestDto) {
