@@ -17,7 +17,7 @@ public class IndexController {
 
     // "/"로 GET 요청이 들어오면 index.mustache를 띄워줌
     @GetMapping("/")
-    public String index() {
+    public String index(Model model) {
         model.addAttribute("posts", postsService.findAllDesc());
         return "index";
     }

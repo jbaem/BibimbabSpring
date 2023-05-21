@@ -7,10 +7,11 @@ import com.springboot.web.dto.PostsListResponseDto;
 import com.springboot.web.dto.PostsResponseDto;
 import com.springboot.web.dto.PostsSaveRequestDto;
 import com.springboot.web.dto.PostsUpdateRequestDto;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
